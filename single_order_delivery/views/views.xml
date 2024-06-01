@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <!-- Extending the Sale Order Form View to add our custom button -->
+        <record id="view_order_form_custom" model="ir.ui.view">
+            <field name="name">sale.order.form.custom</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="action_confirm_and_create_deliveries"
+                            string="Confirm and Create Deliveries"
+                            type="object"
+                            class="btn-primary"/>
+                </header>
+            </field>
+        </record>
+    </data>
+</odoo>
